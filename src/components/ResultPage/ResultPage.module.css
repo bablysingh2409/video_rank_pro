@@ -1,0 +1,156 @@
+
+.video_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   
+
+
+}
+.rankOne_container{
+    width: 70%;
+    height: 20%;
+    background-color: #45474B;
+    position: absolute;
+    top: 10%;
+    padding: 2rem;
+   left: 10%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ 
+   border-radius: 1.2rem;
+
+}
+
+.topVideo_thumb{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #45474B;
+   
+}
+.topVideo_thumb h3{
+    border: 1px solid #B6BBC4;
+    background-color: #B6BBC4;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    color: white;
+   
+}
+
+.topVideo_thumb img{
+    border: 1px solid;
+    border-radius: 1.5rem;
+    object-fit: contain;
+}
+.topVideo_thumb p{
+    color: #B6BBC4;
+    background-color: #45474B;
+}
+
+.top_video_details{
+    display: flex;
+    flex-direction: column;
+   gap: 10px;
+   
+    width: 30%;
+    background-color: #45474B;
+}
+
+
+.top_video_details h3{
+    color: white;
+    background-color: #45474B;
+}
+.top_video_details p{
+    color: #B6BBC4;
+    background-color: #45474B;
+    
+}
+
+.Top_video_earning{
+    /* flex-grow: 3; */
+    width: 40%;
+    background-color:#45474B ;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Top_video_earning h2{
+    font-size: 2rem;
+    color: white;
+    background-color: #45474B;
+}
+
+.table_main_container{
+    width: 100%;
+    padding: 20px;
+   
+}
+
+.table_container{
+  
+    position: relative;
+    top: 400px;
+    left: 10%;
+   
+    width: 70%;
+    
+    padding: 5px;
+  
+
+
+}
+.table_headings{
+    display: flex;
+    gap: 20px;
+    background-color: #45474B;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    
+}
+
+th{
+    text-align: center;
+    margin: 10px;
+    color: white;
+    font-size: 1.2rem;
+    background-color: #45474B;
+}
+
+.table_body{
+    display: flex;
+    flex-direction: column;
+   
+  
+}
+.table_row{
+    display: flex; 
+     gap: 55px;
+     padding: 5px;
+
+    flex-wrap: nowrap;
+    box-shadow: rgba(220, 215, 215, 0.24) 0px 3px 8px;
+    border-bottom: 1px solid white;
+}
+.table_row td{
+   
+    text-align: center;
+    color: white;
+   
+}
+
+
+.table_headings{
+    display: flex;
+    padding: 2px;
+    gap: 15px;
+
+}
+

@@ -17,3 +17,15 @@ export const getSubscriberDetails=async(channelId)=>{
     return data.items[0].statistics.subscriberCount;
 
 }
+
+export const saveVideoDetails=async(video)=>{
+    const res=await axios.post("http://localhost:5004/video/save",video);
+    const data=await res.data;
+    return data._id;
+}
+
+export const getVideoRankWise=async(video)=>{
+    const res =await axios.get("http://localhost:5004/video/analyze");
+    const data=res.data.rankedVideos;
+    return data;
+}

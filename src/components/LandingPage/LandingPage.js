@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { getvideoDetails,getSubscriberDetails } from '../../sevices/videoServices';
+import { getvideoDetails,getSubscriberDetails,saveVideoDetails } from '../../sevices/videoServices';
+import { useNavigate } from 'react-router-dom';
 
 
 function LandingPage() {
     const [videoLink,setVideoLink]=useState('');
     const [allVideo,setAllVideo]=useState({});
+    const navigate=useNavigate();
 
     function extractVideoId(link) {
         const match = link.match(/[?&]v=([^?&]+)/);
@@ -18,6 +20,8 @@ function LandingPage() {
        const dataInfo=data.items[0];
        const channelId= dataInfo.snippet.channelId;
        const subscriberCount=await getSubscriberDetails(channelId);
+       const  uploadedOn=dataInfo.snippet.publishedAt;
+       const date=new Date(uploadedOn).toLocaleDateString();
       const views= dataInfo.statistics.viewCount;
        const likes= dataInfo.statistics.likeCount;
       const  comments= dataInfo.statistics.commentCount;
@@ -28,9 +32,13 @@ function LandingPage() {
             views,
             likes,
             comments,
-            estimatedEarning
+            estimatedEarning,
+            date
         }
+       const _id= await saveVideoDetails(allVideoCollection)
+    //    console.log(_id)
         setAllVideo({...allVideoCollection})
+        navigate(`/result/${_id}`)
     }catch(err){
         console.log('error while fetching data',err);
     }
