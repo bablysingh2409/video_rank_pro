@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { getvideoDetails,getSubscriberDetails,saveVideoDetails } from '../../sevices/videoServices';
 import { useNavigate } from 'react-router-dom';
 import style from './LandingPage.module.css'
+import Loader from '../Loader';
 
 
 function LandingPage() {
     const [videoLink,setVideoLink]=useState('');
     const [allVideo,setAllVideo]=useState({});
+    const [loading,setLoading]=useState(false)
     const navigate=useNavigate();
 
     function extractVideoId(link) {
@@ -15,6 +17,10 @@ function LandingPage() {
       }
 
     const handleAnalysis=async()=>{
+        if(!videoLink){
+            return alert('input link must be filled');
+        }
+        setLoading(true);
         try{
        const videoId= extractVideoId(videoLink);
        const data= await getvideoDetails(videoId);
@@ -40,10 +46,16 @@ function LandingPage() {
     //    console.log(_id)
         setAllVideo({...allVideoCollection})
         navigate(`/result/${_id}`)
+        setLoading(false);
     }catch(err){
-        console.log('error while fetching data',err);
+        alert('error while fetching data',err);
+        setLoading(false);
     }
         
+    }
+
+    if(loading){
+        return <Loader/>
     }
 
   return (
@@ -55,7 +67,7 @@ function LandingPage() {
         <div className={style.landingPage_input_container}>
             <input type='text' placeholder='enter youtube video link' value={videoLink} onChange={(e)=>{
                 setVideoLink(e.target.value)
-            }}/>
+            }} required/>
             <button onClick={handleAnalysis}>Start Analysis</button>
         </div>
     </div>
