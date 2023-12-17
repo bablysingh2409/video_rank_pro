@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getvideoDetails,getSubscriberDetails,saveVideoDetails } from '../../sevices/videoServices';
 import { useNavigate } from 'react-router-dom';
+import style from './LandingPage.module.css'
 
 
 function LandingPage() {
@@ -46,12 +47,12 @@ function LandingPage() {
     }
 
   return (
-    <div>
-        <div>
+    <div className={style.landingPage_container}>
+        <div className={style.landingPage_heading}>
             <h1>Discover Your earning potential</h1>
             <p>Turn your youtube expertise into a lucrative income through resource sharing</p>
         </div>
-        <div>
+        <div className={style.landingPage_input_container}>
             <input type='text' placeholder='enter youtube video link' value={videoLink} onChange={(e)=>{
                 setVideoLink(e.target.value)
             }}/>

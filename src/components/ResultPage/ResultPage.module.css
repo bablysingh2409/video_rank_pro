@@ -1,25 +1,22 @@
 
 .video_container{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-   
-
-
+    width: 90%;
+    margin-top: 20px;
 }
 .rankOne_container{
     width: 70%;
-    height: 20%;
+    /* height: 20%; */
     background-color: #45474B;
-    position: absolute;
-    top: 10%;
-    padding: 2rem;
-   left: 10%;
+    /* position: absolute; */
+    /* top: 10%; */
+     padding: 2rem;
+   /* left: 10%; */
    display: flex;
    justify-content: space-between;
    align-items: center;
- 
    border-radius: 1.2rem;
+   margin: auto;
+   gap: 20px;
 
 }
 
@@ -54,7 +51,6 @@
     display: flex;
     flex-direction: column;
    gap: 10px;
-   
     width: 30%;
     background-color: #45474B;
 }
@@ -71,10 +67,10 @@
 }
 
 .Top_video_earning{
-    /* flex-grow: 3; */
     width: 40%;
+    padding: 50px;
     background-color:#45474B ;
-    height: 80%;
+    /* height: 80%; */
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -87,70 +83,74 @@
     background-color: #45474B;
 }
 
-.table_main_container{
+.table_main_Container{
     width: 100%;
-    padding: 20px;
-   
+    padding: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 220px; */
+}
+
+.table_para{
+    color: white;
+    font-size: 1.3rem
+    /* position: relative; */
+    /* float:right; */
+    /* left: 30%; */
 }
 
 .table_container{
-  
-    position: relative;
-    top: 400px;
+    position: absolute;
+    top: 40%;
+    /* bottom: 0; */
     left: 10%;
-   
-    width: 70%;
-    
+    width: 75%;
     padding: 5px;
-  
-
-
-}
-.table_headings{
-    display: flex;
-    gap: 20px;
     background-color: #45474B;
+    margin-top: 50px;
+}
+
+
+.table_headings{
+    /* width: 80; */
+    /* background-color: #45474B; */
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     
     
 }
 
+.table_row{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    width: 90%;
+    
+}
+
 th{
     text-align: center;
-    margin: 10px;
-    color: white;
-    font-size: 1.2rem;
-    background-color: #45474B;
-}
-
-.table_body{
-    display: flex;
-    flex-direction: column;
    
-  
+    color: white;
+    font-size: 1.3rem;
+    
 }
-.table_row{
-    display: flex; 
-     gap: 55px;
-     padding: 5px;
 
-    flex-wrap: nowrap;
-    box-shadow: rgba(220, 215, 215, 0.24) 0px 3px 8px;
-    border-bottom: 1px solid white;
-}
+
 .table_row td{
    
     text-align: center;
     color: white;
+
    
 }
-
-
-.table_headings{
-    display: flex;
-    padding: 2px;
-    gap: 15px;
-
+.table_row img{
+    width: 55px;
 }
+
+
+
 

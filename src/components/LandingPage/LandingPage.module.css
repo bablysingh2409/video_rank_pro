@@ -1,0 +1,53 @@
+.landingPage_container{
+    width: 50%;
+    /* background-color: red; */
+    height: 40vh;
+    margin: 80px auto ;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.landingPage_heading{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 10px;
+    
+   
+}
+.landingPage_heading h1,p{
+  color: white;  
+}
+
+.landingPage_input_container{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.landingPage_input_container input{
+    width: 70%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+}
+
+.landingPage_container button{
+    width: 25%;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: 1px solid white;
+    color: white;
+    border-radius: 1.2rem;
+}
+ .landingPage_input_container button:hover{
+    background-color: white;
+    color: black;
+ }

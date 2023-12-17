@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getVideoRankWise } from '../../sevices/videoServices';
 import style from './ResultPage.module.css'
 
+
 function ResultPage() {
     const { id } = useParams();
     const [rankWiseVideo, setRankWiseVideo] = useState([]);
@@ -17,6 +18,7 @@ function ResultPage() {
 
     return (
         <div className={style.video_container} >
+            
             <div>
                 {rankWiseVideo.length > 0 &&
                     <div className={style.rankOne_container}>
@@ -38,21 +40,24 @@ function ResultPage() {
             </div>
 
 
-            <div className={style.table_main_Conatiner}>
+            <div className={style.table_main_Container}>
+            <p className={style.table_para}>Other Video Potentials</p>
 
                 {
                     rankWiseVideo.length > 0 &&
                     <table className={style.table_container}>
-                        {/* <p>Other Video Potentials</p> */}
+                        
                         <thead className={style.table_headings}>
+                            <tr className={style.table_row}>
                             <th>Rank</th>
                             <th>Title</th>
                             <th>Thumbnail</th>
                             <th>Views</th>
                             <th>Likes</th>
                             <th>Comments</th>
-                            <th>Uploaded On</th>
-                            <th>estimated Earning</th>
+                            <th>Uploaded<br/>On</th>
+                            <th>estimated <br/>Earning</th>
+                            </tr>
                         </thead>
                         <tbody className={style.table_body}>
                             {rankWiseVideo.map((video) => {
